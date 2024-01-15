@@ -8,7 +8,8 @@
       "mongoose": "latest",
       "dotenv":"latest",
       "express":"latest",
-      "nodemon":"latest"
+      "nodemon":"latest",
+      "ejs": "latest"
     }
   }
   
