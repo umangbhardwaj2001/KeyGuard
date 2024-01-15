@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles.css" />
+    <title>Webpage Text Search</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Password logger</h1>
+      <label for="website">Website name:</label>
+      <input type="text" id="website" placeholder="Enter Website" required />
+
+      <label for="u_email">Username:</label>
+      <input
+        type="text"
+        id="u_email"
+        placeholder="Enter Email/Username"
+        required
+      />
+
+      <label for="u_password">Search Text:</label>
+      <input type="password" id="u_password" placeholder="P@assword" required />
+
+      <button onclick="search()">Search</button>
+    </div>
+
+    <script>
+      function search() {
+        const website = document.getElementById("website").value;
+        const username = document.getElementById("u_email").value;
+        const password = document.getElementById("u_password").value;
+        //   fetch(`/search?u=${encodeURIComponent(url)}&s=${encodeURIComponent(searchText)}`).then(
+        //     ()=>{fetch(`/d/${url}`)}
+        //   );
+        alert(website);
+      }
+    </script>
+  </body>
+</html>
