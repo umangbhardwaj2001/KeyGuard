@@ -3,6 +3,10 @@
     "version": "1.0.0",
     "description": "setup a foundation for MERN app",
     "repository": "https://github.com/umangbhardwaj2001/sample_template_MERN/",
+    "scripts": {
+      "start": "node app.js",
+      "dev" : "nodemon app.js"
+    },    
     "dependencies":
     {
       "mongoose": "latest",
