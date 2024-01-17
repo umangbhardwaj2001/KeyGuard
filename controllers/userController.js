@@ -1,23 +1,15 @@
 const User = require("../models/userModel");
 
-let getAllUsers = new Promise((resolve,reject)=>{
-  users.find().then((resolve)=>{
-    res.json(users)
-  }).catch(reject)
-})
+let getAllUsers = (req, res) => {
+  User.find()
+    .then((resolve) => {
+      res.json(resolve);
+    })
+    .catch((reject) => {
+      console.log(reject);
+    });
+};
 
-
-
-
-
-// const getAllUsers = async (req, res) => {
-//   try {
-//     const users = await User.find();
-//     res.json(users);
-//   } catch (error) {
-//     res.status(500).json({ error: "Internal Server Error" });
-//   }
-// };
 module.exports = {
   getAllUsers,
 };
