@@ -4,7 +4,7 @@ require("dotenv").config();
 const path = require("path");
 
 const app = express();
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 
 // Middleware
 app.use(express.urlencoded({ extended: true }));
@@ -24,5 +24,5 @@ app.use("/search", require("./routes/search"));
 
 // Start the server
 app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${process.env.PORT}`);
+  console.log(`Server is running on http://localhost:${port}`);
 });
